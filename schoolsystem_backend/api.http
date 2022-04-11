@@ -1,0 +1,144 @@
+-----------------------------------
+USER
+-----------------------------------
+### createUser
+POST http://localhost:4000/user
+content-type: application/json
+
+{
+    "name": "Pedro",
+    "email": "pedro@gmail.com",
+    "roles": ["USER", "ADMIN", "TI"],
+    "password": "123",
+    "repassword": "123"
+}
+
+### getAll
+GET http://localhost:4000/user
+
+### getById
+GET http://localhost:4000/user/6245f8c9c3a8209ad48eb469
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjQ3MTVhYzRkYThlMmZkMzYxZDc2OGEiLCJ1c2VybmFtZSI6IlBlZHJvIiwiaWF0IjoxNjQ5NzEyNjk2LCJleHAiOjE2NDk3MjcwOTZ9.oohwxXfe1bv6WVaE4E0Ah3e7HpbhtDpzHb2hdZXAg4g
+
+### update
+PATCH http://localhost:4000/user/6245f8c9c3a8209ad48eb469
+content-type: application/json
+
+{
+    "name": "Julio Ramos",
+    "email": "julio@gmail.com",
+    "roles": ["USER"]
+}
+
+### removeById
+DELETE http://localhost:4000/user/62424b6a05c6cc8e19c193ba
+
+-----------------------------------
+SUBJECT
+-----------------------------------
+### createSubject
+POST http://localhost:4000/subject
+content-type: application/json
+
+{
+    "name": "Nuxt.js - Framework baseado no Vue.js",
+    "status": "ACTIVE"
+}
+
+### getAll
+GET http://localhost:4000/subject
+
+### getById
+GET http://localhost:4000/subject/6244a240c1832544978a5001
+
+### update
+PATCH http://localhost:4000/subject/6244a5305e797783eee8cda8
+content-type: application/json
+
+{
+    "name": "Next.js - Melhor framework frontend [2022]",
+    "status": "ACTIVE"
+}
+
+### removeById
+DELETE http://localhost:4000/subject/62463bde58c8c08a0b6dc878
+
+-----------------------------------
+COURSE
+-----------------------------------
+### createCourse
+POST http://localhost:4000/course
+content-type: application/json
+
+{
+    "name": "Frontend - Avançando em 2022",
+    "duration": 50,
+    "time_course": "MORNING",
+    "status": "ACTIVE"
+}
+
+### getAll
+GET http://localhost:4000/course
+
+### getById
+GET http://localhost:4000/course/6245fe0cf002519784eaf59f
+
+### update
+PATCH http://localhost:4000/course/6244bfd8f3cbdecfaa674eb6
+content-type: application/json
+
+{
+     "name": "Frontend - Avançando em [2022]",
+    "duration": 50,
+    "time_course": "MORNING",
+    "status": "ACTIVE"
+}
+
+### removeById
+DELETE http://localhost:4000/course/6245fde5f002519784eaf599
+
+-----------------------------------
+COURSE_SUBJECT
+-----------------------------------
+### createCourse
+POST http://localhost:4000/course-subject
+content-type: application/json
+
+{
+    "course_id": "6244bfd8f3cbdecfaa674eb6",
+    "subjects_id": ["6244a240c1832544978a5001"]
+}
+
+### getAll
+GET http://localhost:4000/course-subject
+
+### getById
+GET http://localhost:4000/course-subject/62463b9b58c8c08a0b6dc873
+
+### update
+PATCH http://localhost:4000/course-subject/62463b9b58c8c08a0b6dc873
+content-type: application/json
+
+{
+    "course_id": "6244bfd8f3cbdecfaa674eb6",
+    "subjects_id": ["6244a240c1832544978a5001", "6244a5305e797783eee8cda8"]
+}
+
+### removeById
+DELETE http://localhost:4000/course-subject/62463b18d891eb0f59b8a62d
+
+-----------------------------------
+AUTH
+-----------------------------------
+### login
+POST http://localhost:4000/auth/login
+content-type: application/json
+
+{
+    "email": "pedro@gmail.com",
+    "password": "123"
+}
+
+### getProfile
+GET http://localhost:4000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjQ3MTVhYzRkYThlMmZkMzYxZDc2OGEiLCJ1c2VybmFtZSI6IlBlZHJvIiwiaWF0IjoxNjQ5NzEyNjk2LCJleHAiOjE2NDk3MjcwOTZ9.oohwxXfe1bv6WVaE4E0Ah3e7HpbhtDpzHb2hdZXAg4g

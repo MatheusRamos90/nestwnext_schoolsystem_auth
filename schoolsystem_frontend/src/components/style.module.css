@@ -1,0 +1,37 @@
+/** Toolbar */
+.toolbarNav {
+    padding: 5px 20px 5px 20px;
+    background-color: #666;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.toolbarNav ul {
+    float: right;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+}
+.toolbarNav ul li {
+    list-style: none;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.toolbarNav ul li a {
+    cursor: pointer;
+}
+
+/** AlertMessage */
+.alertMessage {
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+.alertDanger {
+    color: #fff;
+    background-color: #E53935;
+}
+.alertInfo {
+    color: #fff;
+    background-color: #1565C0;
+}
