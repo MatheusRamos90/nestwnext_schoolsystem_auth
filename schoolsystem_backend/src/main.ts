@@ -20,7 +20,6 @@ async function bootstrap() {
 
   await app.listen(PORT, () => {
     console.log(`Environment: ${configService.get<string>('NODE_ENV')}`);
-    console.log(`PublicSecret ${configService.get<string>('PUBLIC_SECRET_KEY')}`);
     console.log(`Server is running on port ${PORT}`)
   });
 }

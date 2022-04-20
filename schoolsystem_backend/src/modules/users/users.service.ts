@@ -5,6 +5,7 @@ import { Model } from 'mongoose';
 import { BadRequestException } from 'src/exceptions/bad-request-exception.dto';
 import { InternalServerErrorException } from 'src/exceptions/internal-server-error-exception.dto';
 import { NotFoundException } from 'src/exceptions/not-found-exception.dto';
+import { CreateUserLoginDto } from './dto/create-user-login.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UserResponseDto } from './dto/user-response.dto';
@@ -16,7 +17,7 @@ export class UsersService {
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>
   ) {}
 
-  async create(createUserDto: CreateUserDto): Promise<UserResponseDto> {
+  async create(createUserDto: CreateUserDto | CreateUserLoginDto): Promise<UserResponseDto> {
     if (createUserDto.password.trim() !== createUserDto.repassword.trim()) {
       throw new BadRequestException('Password dont match');
     }

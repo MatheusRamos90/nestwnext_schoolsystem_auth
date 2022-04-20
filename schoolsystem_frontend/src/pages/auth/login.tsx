@@ -15,7 +15,7 @@ const AuthLogin: NextPage = () => {
       await signIn(form.current['email'].value, form.current['password'].value)
     } catch (error: any) {
       console.error(error)
-      setMessage(error.response.data.message)
+      setMessage(!error.response || !error.response.data ? "Occured an intern error. Check your request API." : error.response.data.message)
       setShowMessage(true)
       setTimeout(() => {
         setShowMessage(false)

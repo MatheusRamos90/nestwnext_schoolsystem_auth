@@ -1,0 +1,18 @@
+version: '3'
+services:
+  schoolsystem_frontend:
+      image: mhramos/schoolsystem_frontend:latest
+      container_name: schoolsystem_frontend
+      build: .
+      command: yarn start
+      ports:
+        - '3000:3000'
+      volumes:
+        - .:/usr/src/app
+        - /usr/src/app/node_modules
+      networks:
+        - schoolsystem_network
+
+networks:
+  schoolsystem_network:
+    external: true

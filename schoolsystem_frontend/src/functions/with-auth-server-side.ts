@@ -1,6 +1,6 @@
-import { ACCESS_TOKEN, clearCookies, isTokenExpired, parseCookies } from "./cookies";
+import { ACCESS_TOKEN, clearCookies, isTokenExpired, parseCookies } from "../utils/cookies";
 
-export function withAuth(func: any) {
+export function withAuthServerSide(func: any) {
     return async (ctx: any) => {
         const cookies = parseCookies(ctx.req)
         const accessToken = cookies[ACCESS_TOKEN]

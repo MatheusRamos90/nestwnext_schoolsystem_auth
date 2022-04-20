@@ -2,7 +2,7 @@ import { GetServerSideProps, NextPage } from "next"
 import Link from "next/link"
 import { http } from "../../config/axios-config"
 import { UserDTO } from "../../dtos/user.dto"
-import { withAuth } from "../../hooks/withauth"
+import { withAuthServerSide } from "../../functions/with-auth-server-side"
 
 const User: NextPage = ({ user }: UserDTO | any) => {
     return (
@@ -18,7 +18,7 @@ const User: NextPage = ({ user }: UserDTO | any) => {
 
 export default User
 
-export const getServerSideProps: GetServerSideProps = withAuth(async ({ params }: any, token: any) => {
+export const getServerSideProps: GetServerSideProps = withAuthServerSide(async ({ params }: any, token: any) => {
     const { data } = await http.get(`/user/${params.id}`, { headers: { 'Authorization': `Bearer ${token}` } })
     const user: UserDTO[] = data
 
