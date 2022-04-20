@@ -16,22 +16,22 @@
 - Dependencies (Cookies, Axios, Etc...)
 - Server Side Rendering
 
-### Start Apps
+## Start Apps
 - Docker [required]
 
-In Development (commands):
-    Backend:
+### In Development (commands):
+    - Backend:
         - yarn install
         - yarn start:dev
-    Frontend:
+    - Frontend:
         - yarn install
         - yarn dev
 
-In Production (up with docker locally)
-    Backend (in projet's folder):
+### In Production (up with docker locally)
+    - Backend (in projet's folder):
         - docker network create schoolsystem_network
         - docker build -t <your_dockerhub>/schoolsystem_backend:latest .
         - docker-compose up
-    Frontend (in projet's folder)
+    - Frontend (in projet's folder)
         - docker build -t <your_dockerhub>/schoolsystem_frontend:latest .
         - docker-compose up
