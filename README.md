@@ -13,7 +13,7 @@
 - Dependencies (Mongo, Mongoose, Jest, Etc...)
 
 ## Frontend - Next.js (schoolsystem_frontend)
-- Dependencies (Cookies, Axios, Etc...)
+- Dependencies (Cookies, Axios, PrimeReact, Etc...)
 - Server Side Rendering
 
 ## Start Apps
