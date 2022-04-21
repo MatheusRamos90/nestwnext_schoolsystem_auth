@@ -3,7 +3,7 @@
 #### Used tecnologies:
 - Nest.js and Next.js
 
-#### Tables:
+#### Collections DB:
 - users (name, email, roles, password),
     subject (name, status),
     course (name, duration, time_course, status),
