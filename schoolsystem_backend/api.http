@@ -146,8 +146,9 @@ POST http://localhost:4000/auth/new
 content-type: application/json
 
 {
-    "name": "Rubens Bumbler",
-    "email": "rubens@gmail.com",
+    "name": "João Lima",
+    "email": "joao.lima@gmail.com",
+    "roles": ["ADMIN", "USER"],
     "password": "123",
     "repassword": "123"
 }

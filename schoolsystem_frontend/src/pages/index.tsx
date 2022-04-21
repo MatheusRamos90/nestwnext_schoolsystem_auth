@@ -8,7 +8,7 @@ const Dashboard: NextPage = () => {
       <Head>
         <title>Dashboard - School System</title>
       </Head>
-      <h2>Dashboard!!</h2>
+      <h3>Dashboard!!</h3>
     </>
   )
 }

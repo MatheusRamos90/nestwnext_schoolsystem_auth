@@ -17,7 +17,6 @@
 - Server Side Rendering
 
 ## Start Apps
-- Docker [required]
 
 ### In Development (commands):
     - Backend:
@@ -28,6 +27,7 @@
         - yarn dev
 
 ### In Production (up with docker locally)
+    - Docker [required]
     - Backend (in projet's folder):
         - docker network create schoolsystem_network
         - docker build -t <your_dockerhub>/schoolsystem_backend:latest .
